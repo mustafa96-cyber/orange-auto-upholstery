@@ -45,10 +45,10 @@
   <a href="services.html">Services</a><a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a><a href="visit.html">Visit</a><a href="tel:+17142792990">Call the shop</a>
 </div>
 
-<header class="hero scroll3d" id="top">
+<header class="hero scroll3d hl-left hb-3" id="top">
   <div class="sticky">
     <div class="hero-bg" aria-hidden="true"></div>
-    <canvas id="gl" data-obj="seat" data-accent="c07a33" aria-hidden="true"></canvas>
+    <canvas id="gl" data-obj="seat" data-accent="c07a33" data-side="left" aria-hidden="true"></canvas>
     <div class="hero-fb" aria-hidden="true"></div>
     <div class="wrap herogrid">
       <div class="hero-copy" id="stageA">
@@ -57,7 +57,7 @@
         <p class="lede">An upholstery shop on Enterprise St in Orange for seats, headliners, carpet, and custom interiors. Craftsmanship you can feel, and work explained before it begins.</p>
         <div class="cta">
           <a class="btn btn-fill" href="tel:+17142792990">Call (714) 279 2990</a>
-          <a class="btn btn-line" href="visit.html">Get directions</a>
+          <a class="btn btn-line" href="#book">Request a quote</a>
         </div>
         <div class="chips" aria-label="What we do"><span class="chip">Seats</span><span class="chip">Headliners</span><span class="chip">Carpet</span><span class="chip">Door panels</span><span class="chip">Convertible tops</span></div>
       </div>
@@ -247,6 +247,25 @@
   </div>
 </section>
 
+<section id="book" class="bookband">
+  <div class="wrap bookgrid">
+    <div class="bookcopy">
+      <p class="kick up">Request a quote</p>
+      <h2 class="up">Tell us about the job.</h2>
+      <p class="up">Tell us about the piece or the interior and we will come back to you with a quote. In the live site this request goes straight to the shop. Prefer to talk now? Call (714) 279 2990.</p>
+      <div class="bookfacts up"><span><b>Call or text</b> &nbsp; <a href="tel:+17142792990">(714) 279 2990</a></span><span><b>Hours</b> &nbsp; Confirm with the shop</span><span><b>Visit</b> &nbsp; 1909 N Enterprise St, Orange, CA 92865</span></div>
+    </div>
+    <form id="bookform" class="bookform up" novalidate>
+      <input type="text" id="f-web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="Leave blank">
+      <label>Your name<input id="f-name" type="text" autocomplete="name" required></label>
+      <label>Phone<input id="f-phone" type="tel" autocomplete="tel" required></label>
+      <label>What needs upholstering<input id="f-car" type="text" required></label>
+      <label>What you would like<select id="f-svc"><option>Car seats</option><option>Full interior</option><option>Headliner or carpet</option><option>Boat or marine</option><option>Furniture</option><option>Something else</option></select></label>
+      <button class="btn btn-fill" type="submit">Request a quote</button>
+      <p class="bookmini">No payment now. They confirm your time by phone.</p>
+    </form>
+  </div>
+</section>
 <section class="ctaband">
   <div class="wrap">
     <h2 class="up">Ready to redo your interior?</h2>
@@ -268,7 +287,7 @@
         <a class="logo" href="index.html" aria-label="Orange Auto Upholstery, home"><svg class="emblem" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="var(--indigo)"/><circle cx="24" cy="24" r="10" fill="none" stroke="var(--shu)" stroke-width="2.6"/><circle cx="24" cy="24" r="3" fill="var(--shu)"/><g stroke="var(--shu)" stroke-width="2.4" stroke-linecap="round"><path d="M24 10v5M24 33v5M10 24h5M33 24h5"/></g></svg><span class="wm"><span class="n">Orange</span><span class="s">Auto Upholstery</span></span></a>
         <p>Seats, headliners, carpet, and custom interiors on Enterprise St, Orange.</p>
       </div>
-      <div class="fcol"><p class="ft">Explore</p><a href="services.html">Services</a><a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a><a href="visit.html">Visit</a></div>
+      <div class="fcol"><p class="ft">Explore</p><a href="services.html">Services</a><a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a><a href="visit.html">Visit</a><a href="index.html#book">Quote</a></div>
       <div class="fcol"><p class="ft">Contact</p><a href="tel:+17142792990">(714) 279 2990</a><p class="mono" style="font-size:12px">1909 N Enterprise St, Orange, CA 92865</p></div>
       <div class="fcol"><p class="ft">Reviews</p><a href="https://www.yelp.com/biz/orange-auto-upholstery-orange" target="_blank" rel="noopener">Yelp</a></div>
     </div>
