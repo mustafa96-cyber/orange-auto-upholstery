@@ -159,6 +159,21 @@ export const BUILD={
    [-0.42,0.42].forEach(x=>{const p=cyl(0.08,0.08,0.5,chrome,12);p.position.set(x,2.35,-1.05);p.rotation.x=-0.16;g.add(p);});
    const head=box(1.25,0.75,0.75,leather,0,2.75,-1.2);head.rotation.x=-0.16;g.add(head);
    g.rotation.y=0.5;g.userData.spin='y';g.userData.scale=0.8;return g;},
+ steeringwheel(o){const g=new THREE.Group();const wrap=M.leather(o.accent||0x1a1a1e);wrap.roughness=.55;const chrome=M.chrome();const boss=M.leather(o.accent||0x7a2230);boss.metalness=.4;
+   g.add(new THREE.Mesh(new THREE.TorusGeometry(2.0,0.28,20,60),wrap));
+   const hub=cyl(0.72,0.72,0.5,chrome,28);hub.rotation.x=Math.PI/2;g.add(hub);
+   const disc=new THREE.Mesh(new THREE.CircleGeometry(0.58,26),boss);disc.position.z=0.26;g.add(disc);
+   [[0,-1],[Math.cos(Math.PI/6),Math.sin(Math.PI/6)],[-Math.cos(Math.PI/6),Math.sin(Math.PI/6)]].forEach(([x,y])=>{const s=new THREE.Mesh(new THREE.BoxGeometry(0.26,1.5,0.2),chrome);s.position.set(x*0.92,y*0.92,0);s.rotation.z=Math.atan2(y,x)-Math.PI/2;g.add(s);});
+   g.rotation.x=-0.38;g.userData.spin='sway';g.userData.scale=0.95;return g;},
+ sofa(o){const g=new THREE.Group();const uph=M.leather(o.accent||0xa45a2a);const w=3.6,d=1.5;
+   g.add(box(w,0.5,d,uph,0,-0.75,0));
+   g.add(box(w/2-0.12,0.42,d-0.35,uph,-w/4,-0.4,0.06));
+   g.add(box(w/2-0.12,0.42,d-0.35,uph, w/4,-0.4,0.06));
+   g.add(box(w,1.5,0.42,uph,0,0.35,-d/2+0.2));
+   g.add(box(w/2-0.12,1.05,0.36,uph,-w/4,0.22,-d/2+0.44));
+   g.add(box(w/2-0.12,1.05,0.36,uph, w/4,0.22,-d/2+0.44));
+   [-1,1].forEach(sx=>g.add(box(0.46,1.35,d,uph,sx*(w/2-0.23),0.0,0)));
+   g.rotation.y=0.5;g.userData.spin='y';g.userData.scale=0.8;return g;},
  bottle(o){const g=new THREE.Group();const glass=new THREE.MeshPhysicalMaterial({color:o.accent||0x2fae9e,roughness:.1,transmission:.6,thickness:.5,transparent:true,opacity:.85,clearcoat:1});
    g.add(cyl(0.9,0.9,2.4,glass,40));const neck=cyl(0.4,0.5,0.6,glass,24);neck.position.y=1.5;g.add(neck);const cap=cyl(0.45,0.45,0.5,M.chrome(),24);cap.position.y=2;g.add(cap);
    const pump=box(0.7,0.15,0.15,M.chrome(),0.5,2.1,0);g.add(pump);

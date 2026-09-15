@@ -2,7 +2,7 @@
 // Reuses the object library so any trade can pick its hero object by name.
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
-import { BUILD } from './objects3d.js?v=3';
+import { BUILD } from './objects3d.js?v=4';
 const canvas=document.getElementById('gl');
 if(canvas && BUILD[canvas.dataset.obj]){
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
